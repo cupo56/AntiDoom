@@ -9,33 +9,42 @@ struct ContentView: View {
     @State private var errorMessage: String?
 
     var body: some View {
-        VStack(spacing: 24) {
-            Image(systemName: "shield.lefthalf.filled")
-                .font(.system(size: 56))
-                .foregroundStyle(.tint)
+        VStack(spacing: Theme.Spacing.m) {
+            Spacer()
+
+            BreathingRing(size: 96) {
+                Image(systemName: "shield.lefthalf.filled")
+                    .font(.system(size: 34, weight: .regular))
+                    .foregroundStyle(Theme.Colors.accent)
+            }
 
             Text("AntiDoom")
-                .font(.largeTitle.bold())
+                .font(Theme.Fonts.display(32))
+                .foregroundStyle(Theme.Colors.ink)
 
             Text(statusText)
-                .font(.headline)
-                .foregroundStyle(statusColor)
+                .font(Theme.Fonts.body(16, weight: .semibold))
+                .foregroundStyle(isApproved ? Theme.Colors.accent : Theme.Colors.inkMuted)
+
+            if let errorMessage {
+                Text(errorMessage)
+                    .font(Theme.Fonts.body(13))
+                    .foregroundStyle(.red)
+                    .multilineTextAlignment(.center)
+            }
+
+            Spacer()
 
             if !isApproved {
                 Button("Berechtigung anfragen") {
                     Task { await requestAuthorization() }
                 }
-                .buttonStyle(.borderedProminent)
-            }
-
-            if let errorMessage {
-                Text(errorMessage)
-                    .font(.footnote)
-                    .foregroundStyle(.red)
-                    .multilineTextAlignment(.center)
+                .buttonStyle(.primary)
             }
         }
-        .padding()
+        .padding(Theme.Spacing.l)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Theme.Colors.canvas)
         .onAppear { status = AuthorizationCenter.shared.authorizationStatus }
     }
 
@@ -52,14 +61,6 @@ struct ContentView: View {
         }
     }
 
-    private var statusColor: Color {
-        switch status {
-        case .approved, .approvedWithDataAccess: return .green
-        case .denied: return .red
-        default: return .secondary
-        }
-    }
-
     private func requestAuthorization() async {
         do {
             try await AuthorizationCenter.shared.requestAuthorization(for: .individual)
@@ -71,6 +72,10 @@ struct ContentView: View {
     }
 }
 
-#Preview {
-    ContentView()
+#Preview("Hell") {
+    ContentView().preferredColorScheme(.light)
+}
+
+#Preview("Dunkel") {
+    ContentView().preferredColorScheme(.dark)
 }
