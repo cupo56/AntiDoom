@@ -29,7 +29,7 @@ struct ContentView: View {
             if let errorMessage {
                 Text(errorMessage)
                     .font(Theme.Fonts.body(13))
-                    .foregroundStyle(.red)
+                    .foregroundStyle(Theme.Colors.danger)
                     .multilineTextAlignment(.center)
             }
 

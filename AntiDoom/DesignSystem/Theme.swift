@@ -13,6 +13,7 @@ enum Theme {
         static let ink      = dynamic(light: 0x1D2A30, dark: 0xE9E7DF)
         static let inkMuted = dynamic(light: 0x8A948F, dark: 0x888F88)
         static let accent   = dynamic(light: 0x7E9B82, dark: 0x8FB093)
+        static let danger   = dynamic(light: 0xBE4A3A, dark: 0xE08270)
         static let onAccent = Color.white
 
         private static func dynamic(light: UInt, dark: UInt) -> Color {
