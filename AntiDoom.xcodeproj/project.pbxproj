@@ -6,7 +6,14 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		93AAB7F9E6603DA8D017CD60 /* SharedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365B662C1D254907C5FE1224 /* SharedStore.swift */; };
+		C823EBF925513C31C8EF0BDD /* FoundationProbe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055C5B210C5649C81B810326 /* FoundationProbe.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		055C5B210C5649C81B810326 /* FoundationProbe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FoundationProbe.swift; sourceTree = "<group>"; };
+		365B662C1D254907C5FE1224 /* SharedStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SharedStore.swift; sourceTree = "<group>"; };
 		BB2B051F2FD8BCBB00C85F1C /* AntiDoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AntiDoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -31,11 +38,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		94F2BF37D70B095A01D05E45 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				365B662C1D254907C5FE1224 /* SharedStore.swift */,
+				055C5B210C5649C81B810326 /* FoundationProbe.swift */,
+			);
+			name = Shared;
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		BB2B05162FD8BCBB00C85F1C = {
 			isa = PBXGroup;
 			children = (
 				BB2B05212FD8BCBB00C85F1C /* AntiDoom */,
 				BB2B05202FD8BCBB00C85F1C /* Products */,
+				94F2BF37D70B095A01D05E45 /* Shared */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +137,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93AAB7F9E6603DA8D017CD60 /* SharedStore.swift in Sources */,
+				C823EBF925513C31C8EF0BDD /* FoundationProbe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
