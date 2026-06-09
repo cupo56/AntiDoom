@@ -41,6 +41,12 @@ The foundation (Teilprojekt 1) exists; blocking/reflection/dashboard/gamificatio
 - All three targets carry the App Group + `com.apple.developer.family-controls` entitlements.
 - **Note:** `FamilyActivityPicker` returns opaque `ApplicationToken`s — no readable app names/bundle IDs. Future models store tokens, not names.
 
+### Design System
+The visual language "Ruhig & Minimal" is implemented as a SwiftUI design system in `AntiDoom/DesignSystem/`. **Build UI against it — do not hardcode colors/fonts/metrics.**
+- `Theme` — the single source of truth: `Theme.Colors` (sage `accent`, `canvas`, `surface`, `border`, `ink`, `inkMuted`, `onAccent`, `danger`; all light/dark dynamic via `UIColor` trait providers, no asset catalog), `Theme.Fonts` (`display` = serif/New York, `body` = SF Pro, `label`), `Theme.Spacing`, `Theme.Radius`.
+- Components: `BreathingRing` (brand motif), `Card`, `ListRow`, `SectionLabel`, and `.primary`/`.secondary` button styles.
+- `StyleGuideView` is living documentation (light + dark `#Preview`s) — view it in Xcode Canvas. Concept spec: `docs/superpowers/specs/2026-06-10-visuelles-konzept-design.md`.
+
 ### Core User Flow
 1. User sets usage limits per app in the main dashboard
 2. DeviceActivity monitor fires when a limit is reached
