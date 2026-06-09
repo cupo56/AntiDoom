@@ -9,11 +9,16 @@
 /* Begin PBXBuildFile section */
 		150CEC5CC3AA0189AEA9DFE6 /* DeviceActivityMonitorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8C8278C7A95258103F49DA /* DeviceActivityMonitorExtension.swift */; };
 		162835D301EF1F167E951954 /* SharedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365B662C1D254907C5FE1224 /* SharedStore.swift */; };
+		1C08237D8BFAA1728490EED1 /* SharedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365B662C1D254907C5FE1224 /* SharedStore.swift */; };
+		45F6859AEA2333E46C368B4E /* ShieldConfigurationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33117A2833683D2541EDB241 /* ShieldConfigurationExtension.swift */; };
+		8150F8B9B6FDBDFAD6240A1E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D51E49356D99059CEB1F96DF /* Foundation.framework */; };
 		886B2C83C7DCAA5C71E38669 /* DeviceActivityMonitor.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2A878AB768976FF367CB4ADC /* DeviceActivityMonitor.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		93AAB7F9E6603DA8D017CD60 /* SharedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365B662C1D254907C5FE1224 /* SharedStore.swift */; };
 		9AB99000F789D75BCA864B91 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D51E49356D99059CEB1F96DF /* Foundation.framework */; };
 		AEAF9688C9589DE445608D61 /* FoundationProbe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055C5B210C5649C81B810326 /* FoundationProbe.swift */; };
+		B0862A7AE0A50AB1AACA38C0 /* FoundationProbe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055C5B210C5649C81B810326 /* FoundationProbe.swift */; };
 		C823EBF925513C31C8EF0BDD /* FoundationProbe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055C5B210C5649C81B810326 /* FoundationProbe.swift */; };
+		E2DA696B2A347705142C4D53 /* ShieldConfiguration.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 7291507133F0574E2A030716 /* ShieldConfiguration.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,6 +28,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = AD73FDE456D5C1B5B69CACA1;
 			remoteInfo = DeviceActivityMonitor;
+		};
+		C3731F1CE9DB177DFE4B31F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB2B05172FD8BCBB00C85F1C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E801E4C6EE1AA93F6FF31400;
+			remoteInfo = ShieldConfiguration;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -34,6 +46,7 @@
 			dstSubfolderSpec = 13;
 			files = (
 				886B2C83C7DCAA5C71E38669 /* DeviceActivityMonitor.appex in Embed Foundation Extensions */,
+				E2DA696B2A347705142C4D53 /* ShieldConfiguration.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -43,12 +56,16 @@
 /* Begin PBXFileReference section */
 		055C5B210C5649C81B810326 /* FoundationProbe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FoundationProbe.swift; sourceTree = "<group>"; };
 		2A878AB768976FF367CB4ADC /* DeviceActivityMonitor.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DeviceActivityMonitor.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		33117A2833683D2541EDB241 /* ShieldConfigurationExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ShieldConfigurationExtension.swift; sourceTree = "<group>"; };
 		365B662C1D254907C5FE1224 /* SharedStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SharedStore.swift; sourceTree = "<group>"; };
 		6A8C8278C7A95258103F49DA /* DeviceActivityMonitorExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DeviceActivityMonitorExtension.swift; sourceTree = "<group>"; };
+		7291507133F0574E2A030716 /* ShieldConfiguration.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShieldConfiguration.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		73B40BBA70578F6B21B8514E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A0AFD47F3E29A7743A44712 /* DeviceActivityMonitor.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = DeviceActivityMonitor.entitlements; sourceTree = "<group>"; };
 		BB2B051F2FD8BCBB00C85F1C /* AntiDoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AntiDoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C91F8FE88EF274510DB8CA07 /* ShieldConfiguration.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = ShieldConfiguration.entitlements; sourceTree = "<group>"; };
 		D51E49356D99059CEB1F96DF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		E683A9A68B6DA5CE6AB03CDA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -62,6 +79,14 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		14129914ABF680708A0AF107 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8150F8B9B6FDBDFAD6240A1E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BB2B051C2FD8BCBB00C85F1C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -86,6 +111,17 @@
 				457F73913E6EF24325A6E51C /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2A65F74D9A5E1D7F261B83D3 /* ShieldConfiguration */ = {
+			isa = PBXGroup;
+			children = (
+				33117A2833683D2541EDB241 /* ShieldConfigurationExtension.swift */,
+				E683A9A68B6DA5CE6AB03CDA /* Info.plist */,
+				C91F8FE88EF274510DB8CA07 /* ShieldConfiguration.entitlements */,
+			);
+			name = ShieldConfiguration;
+			path = ShieldConfiguration;
 			sourceTree = "<group>";
 		};
 		457F73913E6EF24325A6E51C /* iOS */ = {
@@ -125,6 +161,7 @@
 				94F2BF37D70B095A01D05E45 /* Shared */,
 				04AD2947F002A6B926819180 /* Frameworks */,
 				B2526DCC8E2FDC0F165F2C76 /* DeviceActivityMonitor */,
+				2A65F74D9A5E1D7F261B83D3 /* ShieldConfiguration */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,6 +170,7 @@
 			children = (
 				BB2B051F2FD8BCBB00C85F1C /* AntiDoom.app */,
 				2A878AB768976FF367CB4ADC /* DeviceActivityMonitor.appex */,
+				7291507133F0574E2A030716 /* ShieldConfiguration.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -170,6 +208,7 @@
 			);
 			dependencies = (
 				4C7FBE8AE3A9EE830F79223B /* PBXTargetDependency */,
+				B05A7E25DD5611187FCCECF5 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				BB2B05212FD8BCBB00C85F1C /* AntiDoom */,
@@ -178,6 +217,23 @@
 			productName = AntiDoom;
 			productReference = BB2B051F2FD8BCBB00C85F1C /* AntiDoom.app */;
 			productType = "com.apple.product-type.application";
+		};
+		E801E4C6EE1AA93F6FF31400 /* ShieldConfiguration */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 921E27A983E3AF42B9F9F010 /* Build configuration list for PBXNativeTarget "ShieldConfiguration" */;
+			buildPhases = (
+				EFF34BC8F586E88E55231DD3 /* Sources */,
+				14129914ABF680708A0AF107 /* Frameworks */,
+				07009839E19E135932FCE8B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShieldConfiguration;
+			productName = ShieldConfiguration;
+			productReference = 7291507133F0574E2A030716 /* ShieldConfiguration.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -210,11 +266,19 @@
 			targets = (
 				BB2B051E2FD8BCBB00C85F1C /* AntiDoom */,
 				AD73FDE456D5C1B5B69CACA1 /* DeviceActivityMonitor */,
+				E801E4C6EE1AA93F6FF31400 /* ShieldConfiguration */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		07009839E19E135932FCE8B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		595262E43F9EE2B5817C239D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -251,6 +315,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EFF34BC8F586E88E55231DD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45F6859AEA2333E46C368B4E /* ShieldConfigurationExtension.swift in Sources */,
+				1C08237D8BFAA1728490EED1 /* SharedStore.swift in Sources */,
+				B0862A7AE0A50AB1AACA38C0 /* FoundationProbe.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -259,6 +333,12 @@
 			name = DeviceActivityMonitor;
 			target = AD73FDE456D5C1B5B69CACA1 /* DeviceActivityMonitor */;
 			targetProxy = A860A760A368A75A348FE8A5 /* PBXContainerItemProxy */;
+		};
+		B05A7E25DD5611187FCCECF5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ShieldConfiguration;
+			target = E801E4C6EE1AA93F6FF31400 /* ShieldConfiguration */;
+			targetProxy = C3731F1CE9DB177DFE4B31F0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -313,6 +393,32 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
+		};
+		AE157B575B3C55794872DB12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = ShieldConfiguration/ShieldConfiguration.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7PPXXRWMCT;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ShieldConfiguration/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = antidoom.AntiDoom.ShieldConfiguration;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
 		};
 		BB2B052A2FD8BCBC00C85F1C /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -501,9 +607,43 @@
 			};
 			name = Release;
 		};
+		DB8CEDFC0016BD2EF535BDC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = ShieldConfiguration/ShieldConfiguration.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7PPXXRWMCT;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ShieldConfiguration/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = antidoom.AntiDoom.ShieldConfiguration;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		921E27A983E3AF42B9F9F010 /* Build configuration list for PBXNativeTarget "ShieldConfiguration" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE157B575B3C55794872DB12 /* Release */,
+				DB8CEDFC0016BD2EF535BDC4 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BB2B051A2FD8BCBB00C85F1C /* Build configuration list for PBXProject "AntiDoom" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
