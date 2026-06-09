@@ -21,7 +21,7 @@ struct ContentView: View {
                 .font(.headline)
                 .foregroundStyle(statusColor)
 
-            if status != .approved {
+            if !isApproved {
                 Button("Berechtigung anfragen") {
                     Task { await requestAuthorization() }
                 }
@@ -39,18 +39,22 @@ struct ContentView: View {
         .onAppear { status = AuthorizationCenter.shared.authorizationStatus }
     }
 
+    private var isApproved: Bool {
+        status == .approved || status == .approvedWithDataAccess
+    }
+
     private var statusText: String {
         switch status {
         case .notDetermined: return "Berechtigung noch nicht erteilt"
         case .denied: return "Berechtigung verweigert"
-        case .approved: return "Berechtigung erteilt ✓"
+        case .approved, .approvedWithDataAccess: return "Berechtigung erteilt ✓"
         @unknown default: return "Unbekannter Status"
         }
     }
 
     private var statusColor: Color {
         switch status {
-        case .approved: return .green
+        case .approved, .approvedWithDataAccess: return .green
         case .denied: return .red
         default: return .secondary
         }
