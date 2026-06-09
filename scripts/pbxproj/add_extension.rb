@@ -30,6 +30,7 @@ ext = project.new_target(:app_extension, target_name, :ios, DEPLOYMENT)
 
 ext.build_configurations.each do |c|
   bs = c.build_settings
+  bs['PRODUCT_NAME'] = '$(TARGET_NAME)'
   bs['PRODUCT_BUNDLE_IDENTIFIER'] = bundle_id
   bs['INFOPLIST_FILE'] = "#{target_name}/Info.plist"
   bs['GENERATE_INFOPLIST_FILE'] = 'NO'
