@@ -9,6 +9,14 @@ struct ContentView: View {
     @State private var errorMessage: String?
 
     var body: some View {
+        if isApproved {
+            BlockRuleView()
+        } else {
+            authorizationGate
+        }
+    }
+
+    private var authorizationGate: some View {
         VStack(spacing: Theme.Spacing.m) {
             Spacer()
 
@@ -24,7 +32,7 @@ struct ContentView: View {
 
             Text(statusText)
                 .font(Theme.Fonts.body(16, weight: .semibold))
-                .foregroundStyle(isApproved ? Theme.Colors.accent : Theme.Colors.inkMuted)
+                .foregroundStyle(Theme.Colors.inkMuted)
 
             if let errorMessage {
                 Text(errorMessage)
@@ -35,12 +43,10 @@ struct ContentView: View {
 
             Spacer()
 
-            if !isApproved {
-                Button("Berechtigung anfragen") {
-                    Task { await requestAuthorization() }
-                }
-                .buttonStyle(.primary)
+            Button("Berechtigung anfragen") {
+                Task { await requestAuthorization() }
             }
+            .buttonStyle(.primary)
         }
         .padding(Theme.Spacing.l)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
