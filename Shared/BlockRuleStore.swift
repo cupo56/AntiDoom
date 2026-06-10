@@ -9,7 +9,7 @@ import ManagedSettings
 
 enum BlockRuleStore {
     /// Geteilte App Group (identisch zu SharedStore.appGroupID).
-    static let appGroupID = "group.antidoom.AntiDoom"
+    static let appGroupID = "group.com.cupo.antidoom"
 
     /// Name des benannten ManagedSettingsStore. LOAD-BEARING: Extension (setzt
     /// das Schild) und App (löscht es beim Deaktivieren) MÜSSEN denselben Namen

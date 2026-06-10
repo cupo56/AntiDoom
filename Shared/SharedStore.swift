@@ -6,7 +6,7 @@ import Foundation
 import SwiftData
 
 enum SharedStore {
-    static let appGroupID = "group.antidoom.AntiDoom"
+    static let appGroupID = "group.com.cupo.antidoom"
 
     @MainActor
     static let container: ModelContainer = {

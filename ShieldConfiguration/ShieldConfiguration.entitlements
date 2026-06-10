@@ -6,7 +6,7 @@
 	<true/>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.antidoom.AntiDoom</string>
+		<string>group.com.cupo.antidoom</string>
 	</array>
 </dict>
 </plist>
