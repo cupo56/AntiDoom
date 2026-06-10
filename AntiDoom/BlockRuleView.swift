@@ -29,6 +29,12 @@ struct BlockRuleView: View {
                             .foregroundStyle(Theme.Colors.ink)
                         Button("Apps auswählen") { pickerPresented = true }
                             .buttonStyle(.secondary)
+                            .disabled(isActive)
+                        if isActive {
+                            Text("Zum Ändern zuerst deaktivieren.")
+                                .font(Theme.Fonts.body(12))
+                                .foregroundStyle(Theme.Colors.inkMuted)
+                        }
                     }
                 }
 
@@ -40,6 +46,7 @@ struct BlockRuleView: View {
                                 .font(Theme.Fonts.body(16))
                                 .foregroundStyle(Theme.Colors.ink)
                         }
+                        .disabled(isActive)
                         .onChange(of: limitMinutes) { _, newValue in
                             BlockRuleStore.limitMinutes = newValue
                         }
