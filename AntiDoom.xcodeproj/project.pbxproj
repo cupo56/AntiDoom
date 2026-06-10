@@ -10,7 +10,9 @@
 		150CEC5CC3AA0189AEA9DFE6 /* DeviceActivityMonitorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8C8278C7A95258103F49DA /* DeviceActivityMonitorExtension.swift */; };
 		162835D301EF1F167E951954 /* SharedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365B662C1D254907C5FE1224 /* SharedStore.swift */; };
 		1C08237D8BFAA1728490EED1 /* SharedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365B662C1D254907C5FE1224 /* SharedStore.swift */; };
+		43D1E5B48FE627568CFBD603 /* BlockRuleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D0340A4D0A7AF412773007 /* BlockRuleStore.swift */; };
 		45F6859AEA2333E46C368B4E /* ShieldConfigurationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33117A2833683D2541EDB241 /* ShieldConfigurationExtension.swift */; };
+		48DE40D8C69BA16E9695F8D3 /* BlockRuleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D0340A4D0A7AF412773007 /* BlockRuleStore.swift */; };
 		8150F8B9B6FDBDFAD6240A1E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D51E49356D99059CEB1F96DF /* Foundation.framework */; };
 		886B2C83C7DCAA5C71E38669 /* DeviceActivityMonitor.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2A878AB768976FF367CB4ADC /* DeviceActivityMonitor.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		93AAB7F9E6603DA8D017CD60 /* SharedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365B662C1D254907C5FE1224 /* SharedStore.swift */; };
@@ -18,6 +20,7 @@
 		AEAF9688C9589DE445608D61 /* FoundationProbe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055C5B210C5649C81B810326 /* FoundationProbe.swift */; };
 		B0862A7AE0A50AB1AACA38C0 /* FoundationProbe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055C5B210C5649C81B810326 /* FoundationProbe.swift */; };
 		C823EBF925513C31C8EF0BDD /* FoundationProbe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055C5B210C5649C81B810326 /* FoundationProbe.swift */; };
+		D3BDAD629C77970640643483 /* BlockRuleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D0340A4D0A7AF412773007 /* BlockRuleStore.swift */; };
 		E2DA696B2A347705142C4D53 /* ShieldConfiguration.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 7291507133F0574E2A030716 /* ShieldConfiguration.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
@@ -61,6 +64,7 @@
 		6A8C8278C7A95258103F49DA /* DeviceActivityMonitorExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DeviceActivityMonitorExtension.swift; sourceTree = "<group>"; };
 		7291507133F0574E2A030716 /* ShieldConfiguration.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShieldConfiguration.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		73B40BBA70578F6B21B8514E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75D0340A4D0A7AF412773007 /* BlockRuleStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BlockRuleStore.swift; sourceTree = "<group>"; };
 		8A0AFD47F3E29A7743A44712 /* DeviceActivityMonitor.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = DeviceActivityMonitor.entitlements; sourceTree = "<group>"; };
 		BB2B051F2FD8BCBB00C85F1C /* AntiDoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AntiDoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C91F8FE88EF274510DB8CA07 /* ShieldConfiguration.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = ShieldConfiguration.entitlements; sourceTree = "<group>"; };
@@ -137,6 +141,7 @@
 			children = (
 				365B662C1D254907C5FE1224 /* SharedStore.swift */,
 				055C5B210C5649C81B810326 /* FoundationProbe.swift */,
+				75D0340A4D0A7AF412773007 /* BlockRuleStore.swift */,
 			);
 			name = Shared;
 			path = Shared;
@@ -302,6 +307,7 @@
 			files = (
 				93AAB7F9E6603DA8D017CD60 /* SharedStore.swift in Sources */,
 				C823EBF925513C31C8EF0BDD /* FoundationProbe.swift in Sources */,
+				43D1E5B48FE627568CFBD603 /* BlockRuleStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +318,7 @@
 				150CEC5CC3AA0189AEA9DFE6 /* DeviceActivityMonitorExtension.swift in Sources */,
 				162835D301EF1F167E951954 /* SharedStore.swift in Sources */,
 				AEAF9688C9589DE445608D61 /* FoundationProbe.swift in Sources */,
+				48DE40D8C69BA16E9695F8D3 /* BlockRuleStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +329,7 @@
 				45F6859AEA2333E46C368B4E /* ShieldConfigurationExtension.swift in Sources */,
 				1C08237D8BFAA1728490EED1 /* SharedStore.swift in Sources */,
 				B0862A7AE0A50AB1AACA38C0 /* FoundationProbe.swift in Sources */,
+				D3BDAD629C77970640643483 /* BlockRuleStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
