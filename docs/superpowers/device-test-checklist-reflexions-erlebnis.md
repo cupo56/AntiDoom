@@ -16,6 +16,10 @@ Limit erreichen, damit das Schild steht.
       schließt/hängt: dokumentierter `.defer`-Wackler — vermerken.
 - [ ] **3. Unlock:** Auf Screen 2 „Ich bin bereit" → App wird nutzbar (ggf. App
       erneut öffnen; nach `.close` landet man kurz auf Home).
+      **Hinweis:** innerhalb von ~2 Min tippen — wartet man länger, greift der
+      Staleness-Guard (Punkt 6) und Screen 2 erscheint erneut statt Freigabe.
+      Das ist KEIN Bug, sondern der Guard; nicht mit einem `.defer`-Fehler (Punkt 2)
+      verwechseln.
 - [ ] **4. (LOAD-BEARING) Re-Block nach Nutzung:** Nach ~5 Min echter Nutzung
       legt sich das Schild wieder über die App (Fenster-Schwelle; grobe
       Auflösung erwartbar). Pausieren/Weglegen sollte die 5 Min verlängern
