@@ -1,6 +1,6 @@
 //  DeviceActivityMonitorExtension.swift
-//  Setzt beim Erreichen der Tagesschwelle das Schild über die ausgewählten Apps
-//  und löscht es zu Beginn eines neuen Tages-Intervalls (Tages-Reset).
+//  Tageslimit ODER abgelaufenes Nutzungsfenster → Schild (neu) setzen und eine
+//  frische Reflexions-Episode beginnen. Tages-Reset bei Intervallstart.
 
 import DeviceActivity
 import ManagedSettings
@@ -10,8 +10,10 @@ final class DeviceActivityMonitorExtension: DeviceActivityMonitor {
 
     override func intervalDidStart(for activity: DeviceActivityName) {
         super.intervalDidStart(for: activity)
-        // Neuer Tag: Schild zurücksetzen, damit die Apps wieder erreichbar sind.
-        store.shield.applications = nil
+        // Neuer Tag (antidoom.daily um Mitternacht): Schild zurücksetzen.
+        if activity == DeviceActivityManager.activityName {
+            store.shield.applications = nil
+        }
     }
 
     override func intervalDidEnd(for activity: DeviceActivityName) {
@@ -23,8 +25,12 @@ final class DeviceActivityMonitorExtension: DeviceActivityMonitor {
         activity: DeviceActivityName
     ) {
         super.eventDidReachThreshold(event, activity: activity)
-        // Tageslimit erreicht: Schild über die ausgewählten Apps legen.
+        // Tageslimit erreicht ODER Nutzungsfenster aufgebraucht: Schild setzen.
         let tokens = BlockRuleStore.selection.applicationTokens
         store.shield.applications = tokens.isEmpty ? nil : tokens
+        ReflectionStore.beginShieldEpisode()
+        if activity == DeviceActivityManager.windowActivityName {
+            DeviceActivityManager.stopEarnedWindow()
+        }
     }
 }
